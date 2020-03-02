@@ -1,3 +1,6 @@
 [submodule "Modules/basement-portal"]
 	path = Modules/Portal
 	url = git@github.com:Unicus-International/basement-portal
+[submodule "Modules/Backend"]
+	path = Modules/Backend
+	url = git@github.com:Unicus-International/basement-backend
