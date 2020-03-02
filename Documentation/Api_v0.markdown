@@ -23,7 +23,7 @@ email_address: An email address. This is subjected to basic sanity checks, and m
 
 ##### Response Codes
 
-- 201 Created: The user was successfully created and logged in.
+- 201 Created: The user was successfully created and logged in, and the user information can be found in the Location given by the `Location` header.
 - 400 Bad Request: A form field is missing or malformed.
 - 403 Forbidden: A user is already logged in, or the username is taken.
 
@@ -105,8 +105,7 @@ A JSON object representing the completed card object. Any info the user has ente
 
 ##### Response Codes
 
-- 200 OK: The body contains the updated information about the body.
-- 201 Created: The updated information can be found at a location indicated by a Location header.
+- 201 Created: The updated information can be found at a location indicated by the `Location` header.
 - 400 Bad Request: The post body is missing or malformed.
 - 403 Forbidden: No user is logged in, or the logged in user does not have permission to create cards.
 
