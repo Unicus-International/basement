@@ -1,0 +1,11 @@
+server.modules += ( "mod_proxy" )
+
+$HTTP["host"] =~ "^basement" {
+  $HTTP["url"] !~ "^/.well-known" {
+    server.document-root = "/var/basement/www"
+  }
+
+  $HTTP["url"] =~ "^/v0" {
+    proxy.server = ( "" => (( "host" => "::1", "port" => 8282 ) ) )
+  }
+}

@@ -1,0 +1,9 @@
+[program:basement]
+command=/var/basement/bin/basement
+directory=/var/basement/env
+autorestart=true
+user=basement
+stdout_logfile = /var/log/basement/api.stdout.log
+stdout_logfile_maxbytes = 0
+stderr_logfile = /var/log/basement/api.stderr.log
+stderr_logfile_maxbytes = 0
